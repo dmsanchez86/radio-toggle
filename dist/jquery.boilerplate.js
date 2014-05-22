@@ -22,7 +22,8 @@
 		// Create the defaults once
 		var pluginName = "defaultPluginName",
 				defaults = {
-				bodyClasses: []
+				bodyClasses: [],
+				radios: []
 		};
 
 		// The actual plugin constructor
@@ -46,21 +47,77 @@
 						// and this.options
 						// you can add more functions like the one below and
 						// call them like so: this.yourOtherFunction(this.element, this.options).
-						console.log("xD");
-						console.log( this._defaults );
+						// this.yourOtherFunction();
+						// this.findRadioStations();
+						this.clickStation( this.options );
 				},
-				yourOtherFunction: function () {
-						// some logic
+
+				clickStation: function( options ){
+
+					$(".radio-station").on("click", function(){
+						clickedStation = $(this).attr("data-station");
+
+						Plugin.prototype.changeStation(clickedStation, options);
+					});
 				},
-				toggleIt: function(){
-					$.each( bodyClasses, function( i, l ){
-				    if (bodyClass === l){
-				      $("body").toggleClass( "active-"+bodyClass );
-				    }else{
-				      $("body").removeClass("active-"+l);
-				    }
-				  });
+
+
+				changeStation: function(clickedStation, options){
+					console.log(clickedStation);
+
+					$.each( options.radios, function( i, l ){
+						if ( clickedStation === l){
+						  $("body").toggleClass( "active-"+l );
+						}else{
+						  $("body").removeClass("active-"+l);
+						}
+					});
+
+				},
+
+
+
+
+
+
+				findRadioStations: function(){
+					// $.each( this.options.radios, function( i, l ){
+					// 	$("."+l).on("click", function(){
+
+					// 	});
+					// });
+
+
+
 				}
+
+				// aTest: function(){
+
+				// }
+
+				// // toggleIt: function(){
+				// // 	$.each( bodyClasses, function( i, l ){
+				//     if (bodyClass === l){
+				//       $("body").toggleClass( "active-"+bodyClass );
+				//     }else{
+				//       $("body").removeClass("active-"+l);
+				//     }
+				// //   });
+				// // }
+
+
+
+
+				// yourOtherFunction: function () {
+				// 		// some logic
+				// 		console.log( this.options.bodyClasses[1] );
+
+				// 		$.each( this.options.radios, function( i, l ){
+				// 			console.log( i );
+				// 			console.log( l );
+				// 		});
+				// }
+
 		};
 
 		// A really lightweight plugin wrapper around the constructor,

@@ -6,10 +6,23 @@
 		<script src="../dist/jquery.boilerplate.js"></script>
 	</head>
 	<body>
+
+		<div class="radio-station" data-station="one">
+			<p>The first</p>
+		</div>
+		<div class="radio-station" data-station="two">
+			<p>the second</p>
+		</div>
+		<div class="radio-station" data-station="three">
+			<p>the third</p>
+		</div>
+
+
 		<script>
 			$(function() {
 				$(window).defaultPluginName({
-					bodyClasses: [ "nav", "search", "contact" ]
+					bodyClasses: [ "one", "two", "three" ],
+					radios: [ "one", "two", "three" ]
 				});
 			});
 		</script>
