@@ -1,0 +1,22 @@
+.one, .two, .three{
+  width: 100px;
+  height: 100px;
+  display: none;
+}
+
+.active-one .one, .active-two .two, .active-three .three{
+  display: block;
+}
+
+
+.one{
+  background: coral;
+}
+
+.two{
+  background: tomato;
+}
+
+.three{
+  background: crimson;
+}
