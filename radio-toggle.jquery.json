@@ -1,0 +1,32 @@
+{
+    "name": "radioToggle",
+    "title": "Radio Toggle",
+    "description": "Makes any set of elements behave like radio toggles",
+    "keywords": [
+        "jquery",
+        "boilerplate",
+        "plugins"
+    ],
+    "version": "0.1",
+    "author": {
+        "name": "Mark Luetke",
+        "email": "luetkemj@gmail.com",
+        "url": "https://github.com/luetkemj"
+    },
+    "maintainers": [{
+        "name": "Mark Luetke",
+        "email": "luetkemj@gmail.com",
+        "url": "https://github.com/luetkemj"
+    }],
+    "licenses": [{
+        "type": "WTFPL",
+        "url": "http://www.wtfpl.net/"
+    }],
+    "bugs": "https://github.com/luetkemj/radio-toggle/issues",
+    "homepage": "https://github.com/luetkemj/radio-toggle",
+    "docs": "https://github.com/luetkemj/radio-toggle#readme",
+    "download": "https://github.com/luetkemj/radio-toggle/archive/master.zip",
+    "dependencies": {
+        "jquery": ">=1.4"
+    }
+}
