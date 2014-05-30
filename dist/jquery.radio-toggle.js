@@ -48,12 +48,10 @@
             // and this.options
             // you can add more functions like the one below and
             // call them like so: this.yourOtherFunction(this.element, this.options).
-            // this.yourOtherFunction();
-            // this.findRadioStations();
-            this.clickStation(this.options);
+            this.changeStation(this.options);
         },
 
-        clickStation: function(options) {
+        changeStation: function(options) {
 
             $(".radio-station").on("click", function() {
                 clickedStation = $(this).attr("data-station");
