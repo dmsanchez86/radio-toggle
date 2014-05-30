@@ -1,0 +1,30 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+
+.one, .two, .three{
+  width: 100px;
+  height: 100px;
+  display: none;
+}
+
+.active-one .one, .active-two .two, .active-three .three{
+  display: block;
+}
+
+
+.one{
+  background: coral;
+}
+
+.two{
+  background: tomato;
+}
+
+.three{
+  background: crimson;
+}
